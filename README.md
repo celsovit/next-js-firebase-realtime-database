@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CRUD com Next.js 14 e Firebase 10
 
-## Getting Started
+Projeto criado com base no tutorial do canal The Amazing Codeverse (Youtube):
 
-First, run the development server:
+[Create, Read, Update, Delete (CRUD) | Firebase 10 | React 18 (Next.js)](https://youtu.be/ZgXPqzU4F7M)
+
+## Criação do projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ npx create-next-app firebase_using_hooks
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Questions:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- ✔ Would you like to use TypeScript? … `No`
+- ✔ Would you like to use ESLint? … `No`
+- ✔ Would you like to use Tailwind CSS? … `No`
+- ✔ Would you like to use `src/` directory? … `Yes`
+- ✔ Would you like to use App Router? (recommended) … `Yes`
+- ✔ Would you like to customize the default import alias (@/*)? … `No`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Instalação da biblioteca Firebase
 
-## Learn More
+```bash
+$ npm install firebase
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Inicializar servidor desenvolvimento
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+$ npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Criação do projeto no Firebase
 
-## Deploy on Vercel
+- [Acesse Google Firebase](https://firebase.google.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Nome do projeto: `firebasewithhooks`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Google Analytics: `desativado`
+
+- Crie o projeto, e após, clique em continuar
+
+- No menu lateral, expanda Criação
+
+    - selecione `Realtime Database`
+    - Crie um banco de dados
+    - Local Realtime Database: `EUA (us-central1)`
+    - Selecione: `iniciar no modo teste`
+    - Clique para Ativar
+
+- No menu lateral, selecione Visão geral do projeto
+
+    - Clique no ícone "</>" de Aplicativo Web
+    - Apelido do app: `firebasehooks`
+    - Clique no botão `Continuar no console`
+
+- No menu lateral, clique no ícone (⚙️) da Visão geral do projeto
+
+    - Selecione `Configurações do projeto`
+    - Com base no código apresentado no navegador, crie os arquivos `.env.local` e `FirebaseConfig.js` no VS Code conforme segue:
+        - [FirebaseConfig.js](./src/app/components/FirebaseConfig/FirebaseConfig.js)
+        - [.env.local](./env.local.model)
+
+E então, prossiga com a codificação das demais funcionalidades da aplicação, conforme explicado no vídeo tutorial.
+- [Instante do vídeo tutorial em que as demais configurações são definidas](https://youtu.be/ZgXPqzU4F7M?t=382)
